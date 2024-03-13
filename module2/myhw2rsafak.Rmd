@@ -1,0 +1,82 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+soru:1
+```{r}
+
+install.packages("ggplot2")
+install.packages("dplyr")
+
+data <- read.csv("msleep.csv")
+
+class(data)
+```
+
+soru:2
+
+```{r}
+
+
+
+
+primates <- filter(data, order == "Primates")
+
+
+prims <- nrow(primates)
+
+
+prims
+
+```
+
+soru:3
+
+```{r}
+
+primates <- filter(data, order == "Primates")
+
+class(primates)
+
+```
+
+
+soru:4
+```{r}
+
+total_sleep <- primates%>%select(sleep_total)
+
+
+total_sleep
+
+class(total_sleep)
+
+
+
+```
+
+soru:5
+
+
+```{r}
+
+
+sleep_vec<-unlist(total_sleep) 
+
+mean(sleep_vec)
+
+
+```
+
+
+saygilarimla ahmet mucahit safak
+
+
+
+
+
+
+
+
+

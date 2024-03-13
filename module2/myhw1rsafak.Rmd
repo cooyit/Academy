@@ -1,0 +1,104 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+
+
+```{r}
+ library(downloader) ##use install.packages to install
+ url <- "https://raw.githubusercontent.com/genomicsclass/dagdata/master/inst/extdata/femaleMiceWeights.csv"
+ filename <- "femaleMiceWeights.csv"
+ download(url, destfile=filename)
+
+ 
+ 
+ 
+```
+soru:1
+
+```{r}
+
+data <- read.csv("femaleMiceWeights.csv")
+
+class(data) # veritipini belirtir
+
+head(data)# datanin ilk satırları
+
+dim(data) # satir, sutun
+
+
+rownames(data) #satır
+colnames(data) # sutun names
+
+
+```
+
+
+soru: 2
+```{r}
+
+data[12,2] # satır 12 , sutün 2
+
+
+```
+
+
+soru:3
+
+```{r}
+
+
+bw <- data$Bodyweight # data dan bodyweight e git
+
+ans3 <- bw[11]
+
+ans3
+
+
+```
+
+soru:4
+
+```{r}
+
+number_of_mice <- length(bw)
+number_of_mice
+
+
+
+```
+
+soru:5
+
+```{r}
+
+diet <- data$Bodyweight
+
+diet_hf <- diet[seq(13,24)]
+
+mean(data$Bodyweight[13:24])
+
+
+```
+
+soru:6
+
+```{r}
+
+
+?sample
+
+set.seed(1)
+num<-sample(13:24 , 1 )
+
+mice<-data$Bodyweight[num]
+
+print(mice)
+
+```
+
+saygilarimla, ahmet mucahit safak
+
+
