@@ -1,3 +1,6 @@
+Data Analysis for the Life Sciences | Rafael A Irizarry and Michael I Love
+
+
 HOMEWORK 
 download the femaleMiceWeights.csv using downloader package in your path. 
 1. Read in the file femaleMiceWeights.csv and report the body weight of the mouse in the exact name of the
